@@ -26,7 +26,7 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import java.nio.ByteBuffer
 import java.util.SortedMap
-import org.apache.cassandra.db.IColumn
+import org.apache.cassandra.db.Column
 import org.apache.cassandra.utils.ByteBufferUtil
 import scala.collection.JavaConversions._
 
@@ -85,7 +85,7 @@ object CassandraTest {
       job.getConfiguration(),
       classOf[ColumnFamilyInputFormat],
       classOf[ByteBuffer],
-      classOf[SortedMap[ByteBuffer, IColumn]])
+      classOf[SortedMap[ByteBuffer, Column]])
 
     // Let us first get all the paragraphs from the retrieved rows
     val paraRdd = casRdd.map {

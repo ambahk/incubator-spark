@@ -248,7 +248,9 @@ object SparkBuild extends Build {
       "com.codahale.metrics" % "metrics-ganglia" % "3.0.0",
       "com.codahale.metrics" % "metrics-graphite" % "3.0.0",
       "com.twitter" % "chill_2.9.3" % "0.3.1",
-      "com.twitter" % "chill-java" % "0.3.1"
+      "com.twitter" % "chill-java" % "0.3.1",
+
+      "org.apache.cassandra" % "cassandra-all" % "2.0.3"
     )
   )
 
@@ -268,7 +270,7 @@ object SparkBuild extends Build {
 
       "org.apache.hbase" % "hbase" % HBASE_VERSION excludeAll(excludeNetty, excludeAsm),
 
-      "org.apache.cassandra" % "cassandra-all" % "1.2.5"
+      "org.apache.cassandra" % "cassandra-all" % "2.0.3"
         exclude("com.google.guava", "guava")
         exclude("com.googlecode.concurrentlinkedhashmap", "concurrentlinkedhashmap-lru")
         exclude("com.ning","compress-lzf")
